@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Carousel</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    
+    <style>
+        
+
+body {
+
+     margin: 0;
+     padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #014001f9, #026102);
+    color: white;
+      text-align: center;
+}
+
+
+        .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.2s ease;
+        }
+        .slide {
+            flex: 0 0 auto;
+            width: 280px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Arrows */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                width: 220px;
+            }
+            .carousel-container {
+                max-width: 98vw;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .slide {
+                width: 98vw;
+                max-width: 99vw;
+            }
+            .carousel-container {
+                max-width: 99vw;
+            }
+        }
+
+header,
+footer {
+    color: white;
+    padding: 0px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    
+}
+
+.main-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+.main-section {
+justify-content: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-started {
+    background-color: #165fa9;
+    color: rgb(19, 15, 15);
+}
+
+
+
+.about {
+    color: rgb(25, 14, 14);
+    padding: 12px 24px;
+     border-radius: 8px;
+font-size: 16px;
+ cursor: pointer;
+transition: background-color 0.8s ease;
+}
+
+.fancy-btn:hover {
+    background-color: rgb(99, 162, 203);
+        color:#099ddc;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background: linear-gradient(to bottom, #014001f9, #026102);
+    
+}
+
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+     font-size: 40px;
+     margin: 10px;
+    padding-right: 20px;
+    
+       }
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.getstarted button {
+    margin: 0px;
+    border-radius: 8px;
+    font-size: 20px;
+    background-color: #ff4081;
+    color: white;
+}
+
+
+.nav-right select,
+.nav-right button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-right button {
+    background-color: #ff4081;
+    color: white; 
+}
+.main-content h2 {
+    font-size: 3em;
+
+}
+
+nav h1 img {
+    height: 60px;}
+.slide {
+    position: relative; /* taaki caption ko iske andar position kar sake */
+}
+
+        .caption {
+            position: absolute;
+            left: 35%;
+            bottom: 70px;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.55);
+            color: #6da621;
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            text-align: center;
+            
+        }
+
+        .tagline {
+            position: absolute;
+            left: 20%;
+            top: 40px;
+      padding: 18px 36px;
+      font-size: 40px;
+      font-weight: 400;
+      margin-top: 10px;
+      color: rgba(126, 123, 123, 0.879);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+
+
+
+        /* Latest Work Section */
+        .work {
+            background: linear-gradient(to bottom, #014001f9, #026102);
+            padding: 40px 60px;
+            margin-top: 10px;
+            border-radius: 10px;
+            left: 60px;
+        }
+
+        .work h2 {
+            font-weight: 700;
+            margin-bottom: 30px;
+            margin-top: auto;
+            color: white;
+        }
+
+        .work-gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1000px;
+            box-sizing: border-box;
+        }
+        
+        .work-gallery img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+        }
+
+
+
+        .view-all {
+            margin-top: 15px;
+            display: inline-block;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 20px;
+            color: white;
+        }
+        /* Hero Section */
+
+        /* Navbar */
+        .logo1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    background-color: snow;
+            padding: 0px 50px;
+    border-radius: 8px;
+        
+        }
+
+        .logo1 .logo {
+
+            display: flex;
+            height: 60px;
+            width: 90px;
+            font-size: 20px;
+            background-color: rgba(46, 150, 55, 0.856);
+            border-radius: 10px;
+        }
+
+        nav ul li {
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px 60px;
+            align-items: center;
+            border-radius: 8px;
+         background-color: rgba(46, 150, 55, 0.879);
+
+            
+        }
+
+        .hero-left {
+            position: relative;
+        }
+
+        .hero-left img {
+            width: 100%;
+            height: 400%;
+            max-width: 350px;
+            border-radius: 10px;
+            display: block;
+            margin: auto;
+        }
+
+        .vertical-text {
+            position: absolute;
+            left: -70px;
+            top: 30%;
+            transform: rotate(-90deg) translateY(-50%);
+            font-size: 80px;
+            font-weight: 700;
+        
+            color: #fff;
+            color: #111;
+        }
+
+        .hero-right h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .hero-right p {
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .hero-right button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: 1px solid #111;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .showcase {
+            
+            background: linear-gradient(to bottom, #014001f9, #026102);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .showcase h1 {
+            font-size: 2.0rem;
+            margin-bottom: 0px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .features div {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1 1 250px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .features div::before {
+            content: "✔️";
+            font-size: 1.2rem;
+        }
+
+        .background {
+    
+            background-color:  #026102d1;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 1300px;
+            margin: 20px auto;
+        }
+
+        .showcase .core {
+            margin-bottom: 20px;
+            color:white;
+            margin-top: auto;
+            font-size: 3.0rem;
+             background: linear-gradient(to bottom, #014001f9, #026102);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 8px;
+        }
+
+        /* ===== Cards Section ===== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.4rem;
+            color:rgb(16, 5, 5);
+    
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color:black;
+    
+            line-height: 1.4;
+        }
+        .p2{
+            font-size: 20px;
+        }
+
+
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            border-radius: 30px;
+            margin: 50px;
+            background: linear-gradient(135deg, #1db954d4, #0c7f34d5);
+            /* Green gradient */
+            color: white;
+        }
+
+        .contact-left {
+            max-width: 50%;
+        }
+
+        .contact-left h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-left h1 {
+            font-size: 48px;
+            color: #ffd700;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .contact-left p,
+        .contact-left a {
+            font-size: 16px;
+            line-height: 1.8;
+            text-decoration: none;
+            color: white;
+        }
+
+        .contact-right {
+            max-width: 40%;
+        }
+
+        .contact-right h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .email-input {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .email-input input {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+        }
+
+        .email-input input::placeholder {
+            color: #eee;
+        }
+
+        .email-input button {
+            background: #00e676;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                padding: 30px 20px;
+            }
+
+            .contact-left,
+            .contact-right {
+                max-width: 100%;
+            }
+        }
+
+        /*..card5..*/
+        
+        /*-----------..BUILD SECTION..--------*/
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40px;
+          background: linear-gradient(90deg, #034d14ea, #37c21b86);
+
+    
+            border-radius: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-content {
+            flex: 1 1 55%;
+            padding-right: 30px;
+        }
+
+        .text-content h1 {
+            font-size: 48px;
+            font-weight: bold;
+            
+            margin-bottom: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient();
+            /* Green gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .p7  {
+            font-size: 20px;
+         color: white;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .features div {
+            width: 45%;
+            font-size: 16px;
+        }
+
+        .features span {
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        .button {
+            display: flex;
+            gap: 30px;
+          margin-top: 20px;
+        }
+
+        .button button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .start-btn {
+            background-color:rgba(0, 0, 0, 0.817) ;
+            color: white;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+
+        .work-btn {
+         background-color:rgba(0, 0, 0, 0.817) ;
+            color: white;
+            font-size: 20px;
+            border-radius: 9px;
+        }
+        .button .work-btn:hover {
+            background-color: #acc208;
+            color:white;
+        }
+        .button .start-btn:hover {
+            background-color: #acc208;
+            color:white;
+        }
+
+        
+
+        .image-content {
+            flex: 1 1 40%;
+            text-align: center;
+            position: relative;
+        }
+
+        .image-content img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-box {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgb(112, 43, 43);
+            padding: 10px 16px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .text-content,
+            .image-content {
+                flex: 1 1 100%;
+                padding: 0;
+            }
+
+            .features div {
+                width: 100%;
+            }
+        }
+ 
+
+/*  MOBILE APPP SECTION -----------------*/
+
+        .section-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #f9f9f9;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .tag::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #4c8eff;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+        h1 span {
+            background: linear-gradient(90deg, #4c63ff, #cc37dd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .description {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1rem;
+            color: #5f6c7b;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .category-buttons button {
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-buttons button:hover {
+            background-color: #eaeaea;
+        }
+
+        .category-buttons .active {
+            background: linear-gradient(90deg, #4c63ff, #cc37dd);
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+       
+        .app-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            background: #2e3a59;
+            color: white;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .info .fa-star {
+            color: gold;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .buttons a {
+            padding: 10px 15px;
+            border-radius: 25px;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .buttons a:hover {
+            background: #444;
+        }
+
+/*-------TEAM MEMBER---*/
+        .team-section {
+            text-align: center;
+            padding: 50px 20px;
+            color: #000;
+            border-radius:8px;
+             background: linear-gradient(90deg, #28a745, #00c853);
+
+        }
+
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .team-card {
+            background: #ffffffe7;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+            color: #222;
+        }
+
+        .team-card p.role {
+            font-size: 0.9rem;
+            color: #070707;
+            margin-bottom: 10px;
+        }
+
+        .team-card p.about {
+            font-size: 0.9rem;
+            color: #0f0e0e;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- 🔝 Header -->
+<header>
+    <nav>
+        <h1 class="nav-left">𝔽𝕚𝕟𝕩𝕥𝔸𝕡𝕡
+</h1>
+        <div class="nav-left">
+            <a href="#">Home</a>
+            <a href="about.html">About</a>
+            <a href="app.html">Apps</a>
+            <a href="blog.html">Blog</a>
+            <a href="career.html">Career</a>
+            <a href="consultant.html">Consultant</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="getstarted">
+            <button>Get in Touch</button>
+        </div>
+    </nav>
+
+</header>
+<!-- 💡 Main Content -->
+<div class="main-content">
+    <h2>Where Innovation meets Everyday Life</h2>
+    <p>We're Full-service digital agency specializing in branding, web design, development, and digital marketing.</p>
+    <p> Let's build something extraordinary
+        together.</p>
+    </p>
+    <div class="cta-buttons">
+        <a href="app.html">
+            <button class="get-started">Get Started</button></a>
+
+        <a href="contact.html">
+            <button class="contact">Learn More</button>
+        </a>
+
+        <div></div>
+    </div>
+    <!-- 💡 Carousel -->
+    <h2>Our Work Showcase</h2>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="slide"><img src="app image/ap.jpg" alt="1"></div>
+            <div class="slide"><img src="app image/cop.jpg" alt="2"></div>
+            <div class="slide"><img src="app image/images.jpg" alt="3"></div>
+            <div class="slide"><img src="app image/ap.jpg" alt="4"></div>
+            <div class="slide"><img src="app image/cop.jpg" alt="5"></div>
+            <div class="slide"><img src="app image/images.jpg" alt="6"></div>
+        </div>
+        <button class="arrow left">&#10094;</button>
+        <button class="arrow right">&#10095;</button>
+    </div>
+
+    <!-- ✅ Correct JS -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.arrow.right');
+        const prevButton = document.querySelector('.arrow.left');
+
+        let index = 0;
+        let slideWidth = slides[0].getBoundingClientRect().width + 20; // card + gap
+        const visibleSlides = () => {
+            if (window.innerWidth <= 500) return 1;
+            if (window.innerWidth <= 900) return 2;
+            return 4;
+        };
+
+        function showSlide() {
+            slideWidth = slides[0].getBoundingClientRect().width + 20;
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (index < slides.length - visibleSlides()) {
+                index++;
+            } else {
+                index = 0;
+            }
+            showSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+            } else {
+                index = slides.length - visibleSlides();
+            }
+            showSlide();
+        });
+
+        // Auto scroll
+        setInterval(() => {
+            if (index < slides.length - visibleSlides()) {
+                index++;
+            } else {
+                index = 0;
+            }
+            showSlide();
+        }, 3000);
+
+        // Responsive: recalculate slideWidth on resize
+        window.addEventListener('resize', showSlide);
+        // Initial position
+        showSlide();
+    </script>
+    <!-- 🔚 Carousel End -->
+    <div class="stats">✅ 2k+Active Users<br>✅ 99% Customer Satisfaction </div>
+
+
+
+
+<!-- Latest Work -->
+ <div>
+<section class="work">
+    <h2>Explore Our Latest
+    Creative Work</h2>
+    <p>Discover how we've helped businesses transform their digital presence with innovative solutions and
+    cutting-edge technology.
+</p>
+    <div class="work-gallery">
+        <!-- Add more language options here -->
+       
+        <img src="app image/images.jpg" alt="work1">
+        <img src="app image/ap.jpg" alt="work2">
+        <img src="app image/cop.jpg" alt="work3">
+        
+    </div>
+    <span class="view-all">view all</span>
+</section>
+
+<!-- Header -->
+<header class="logo1">
+    <nav>
+        <div class="logo"><img src="app image/finapp.jpg" alt="Profile">
+</div>
+    </nav>
+
+    <div class="social">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-dribbble"></i>
+        <i class="fab fa-behance"></i>
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+    </div>
+</header>
+
+<!-- ABOUT ME------------------>
+
+<section class="hero">
+    <div class="hero-left">
+        <img src="app image/p2.jpeg" alt="Profile">
+        <div class="vertical-text">𝔽𝕚𝕟𝕩𝕥𝔸𝕡𝕡</div>
+
+    </div>
+    <div class="hero-right">
+        <h2>About Me</h2>
+        <p>
+            FinxtApp, Our mission is to simplefy and transform financial management for individuals and businesses over the world We
+            aim to empower shopkeeper,freelances, and small businesses owners by building intuitive digital tools that make expense
+            tracking , invoicin, and reporting easy, fast, and accessible--no matter their level of technical expertise . We
+            innovate not just to keep pace with technology, but to solve real problems that improve daily lives, helping local
+            businesses thrive in a digital-first world.
+        </p>
+        <p>
+            founded in 2021 by a group of engineers passionate about impact-driven innovation, we began as a small startup with a
+            vision to solve real-world problems through technology. Over the years, we’ve grown into a multidisciplinary team,
+            launching products that have helped thousands of users worldwide in their daily lifestyle and make easy also.
+        </p>
+        <button>schedule a call</button>
+    </div>
+</section>
+<!--------- CORE VALUE------------------------>
+
+<div class="background">
+    <section class="showcase">
+        <h1 class="core">Core Values</h1>
+        <p class="p2">
+            We are driven by a deep sense of purpose and guided by values that keep us grounded and focused. And our
+            team
+            delivers products that make life easy.
+        </p>
+
+        <div class="features">
+            <div>
+                <h1>How to get started</h1>
+                <p>Install the app. Download Finxt India / FinNext India from the Google Play Store or Apple App
+                    Store.</p>
+            </div>
+            <div>
+                <h1>Create your account & complete KYC</h1>
+                <p>Sign up and finish mandatory KYC (PAN, ID, bank details) so you can invest in mutual funds.</p>
+            </div>
+            <div>
+                <h1>Plan your goals</h1>
+                <p>Use Goal-Based Financial Planning to define targets and get an investing path (SIPs/lump-sum).
+                </p>
+            </div>
+            <div>
+                <h1>Start investing</h1>
+                <p>Pick mutual funds, start a SIP or lump-sum, and track them via systematic reports.</p>
+            </div>
+            <div>
+                <h1>Explore advanced services</h1>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+            <div>
+                <h1>Track & review regularly</h1>
+                <p>Check your portfolio, use calculators and fund-performance screens, and adjust SIPs as needed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Cards Section ===== -->
+    <div class="cards">
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Stock Trading">
+            <div class="card-content">
+                <h3>Market Access</h3>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+        </div>
+<div class="card">
+    <img src="app image/financial support.jpg" alt="Stock Trading">
+    <div class="card-content">
+        <h3>Market Access</h3>
+        <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="app image/financial support.jpg" alt="Stock Trading">
+    <div class="card-content">
+        <h3>Market Access</h3>
+        <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+    </div>
+</div>
+
+        </div>
+        </div>
+
+<!--------- BUILD SECTINO------------------------>
+    <div class="container">
+        <div class="text-content">
+            <h1>Build the Future with Us <br><span class="gradient-text">Innovate, Build, Grow.</span></h1>
+            <p class="p7">
+                We help businesses turn ideas into scalable solutions using modern technology and creativity. i.e.
+                Expensages
+            </p>
+    
+            <div class="features">
+                <div><span>✓</span>Custom Software Development</div>
+                <div><span>✓</span>End-to-End Project Delivery services</div>
+                <div><span>✓</span>AI & Automation Integrations in products</div>
+            </div>
+    
+            <div class="button2">
+                <a href="project.html">
+                <button class="start-btn">Start new Project</button></a>
+            
+                <a href="work.html">
+                    <button class="work-btn">See Our Work here</button>
+                </a>
+
+            </div>
+        </div>
+    
+        <div class="image-content">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Team at work">
+            <div class="info-box">
+                120+ Projects<br>11+ Years Experience
+            </div>
+        </div>
+    </div>
+
+
+<!--------------- OUR APPLICATION----------------->
+
+
+<section class="section-wrapper">
+
+    <!-- Tag Label -->
+    <div class="tag">Our Application</div>
+
+    <!-- Heading -->
+    <h1>
+        Discover Our Award-Winning <span>Mobile Apps</span>
+    </h1>
+
+    <!-- Subtext -->
+    <p class="description">
+        From productivity tools to wellness companions, our apps are designed with user experience at the forefront.
+    </p>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+        <button class="active">All</button>
+        <button>Design</button>
+        <button>Finance</button>
+        <button>Food and Recycling</button>
+        <button>Game</button>
+        <button>Digital Services</button>
+    </div>
+
+    <!-- App Cards -->
+    <div class="app-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="app image/ap.jpg" alt="DesignPro">
+            <div class="card-content">
+                <h3>DesignPro</h3>
+                <p>Professional design tool for mobile and web...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 4.1</span>
+                    <span>1K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Invoice Sage">
+            <div class="card-content">
+                <h3>Invoice Sage</h3>
+                <p>Track invoices and manage your billing easily...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 3.9</span>
+                    <span>2K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="app image/cop.jpg" alt="Spoonshare">
+            <div class="card-content">
+                <h3>Spoonshare</h3>
+                <p>Share unused food with those in need easily...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 5.0</span>
+                    <span>10K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- team member-->
+<section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Rahul Sharma</h3>
+            <p class="role">Web Developer</p>
+            <p class="about">Expert in front-end and back-end development. Loves coding and coffee.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Priya Verma</h3>
+            <p class="role">UI/UX Designer</p>
+            <p class="about">Passionate about creating user-friendly designs and experiences.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Amit Kumar</h3>
+            <p class="role">Project Manager</p>
+            <p class="about">Skilled in managing projects, leading teams, and delivering results on time.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- foooter section-->
+<section class="contact-section">
+    <div class="contact-left">
+        <h2>Tell us about your project</h2>
+        <h1>Let's Talk</h1>
+        <p><strong>Head Office</strong></p>
+        <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+        <p><a href="mailto:support@example.com">support@example.com</a></p>
+        <p>+ (406) 555-0120</p>
+    </div>
+    <div class="contact-right">
+        <h2>Get the latest inspiration & insights</h2>
+        <form class="email-input">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">&#8594;</button>
+        </form>
+    </div>
+</section>
+
+
+
+<footer>
+    © 2025 Finxtapp. All Rights Reserved.
+</footer>
+</div>
+</body>
+
+</html>

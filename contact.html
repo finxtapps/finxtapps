@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Finxtapp</title>
+    <style>
+        body {
+    
+            margin: 0;
+            padding: 0;
+       background: linear-gradient(to bottom, #023602, #013101c8);
+  color: white;
+            font-family: Arial, sans-serif;
+    
+    }
+        
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3f51b5;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        button {
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #303f9f;
+        }
+  
+
+    .contact-section {
+            background: linear-gradient(to bottom, #023602, #013101c8);
+
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .info-section{
+    background: linear-gradient(to bottom, #023602, #013101c8);
+color: white;
+        padding: 40px 20px;
+      text-align: center;
+      margin-top: -50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }  
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.829);
+            color: black;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+         display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+           padding: 30px;
+
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1 1 300px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color:blue;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #444;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+        
+
+        .address-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #d6dfe5c5;
+            border-left: 5px solid #2196f3;
+            border-radius: 6px;
+        }
+
+        .address-box h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+
+        .address-box a {
+            margin-right: 15px;
+            color: #1976d2;
+            background-color: #007bff76;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .support-section {
+            text-align: center;
+        }
+
+        .support-section button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-section button:hover {
+            background-color: #005fa3;
+        }
+
+        .faq {
+            text-align: left;
+        }
+
+        .faq h2 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .faq p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+<div class="contact-section">
+    <h1>Get in Touch with Us..</h1>
+    <p>We'd love to hear from you. Whether you have a question about our services, need support, or just want to chat
+        we're here for you every time.</p>
+    <button>Contact Us</button>
+</div>
+
+<div class="info-section">
+    <h2>Contact Information</h2>
+    <p>Reach out via phone, email, or drop by our office.</p>
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+
+            <div class="info-item"><strong>📞Phone:</strong> ‪+91-9876543210‬</div>
+
+
+            <div class="info-item"><strong> @ 📩 Email:</strong> support@yourcompany.com</div>
+
+
+            <div class="info-item"><strong>➤ 📍🗺️Office:</strong> 42 MG Road, Bengaluru, Karnataka 560001, India</div>
+
+
+            <div class="info-item"><strong> 👩🏻‍💻⏳Working Hours:</strong> Monday - Friday: 9:00 AM to 6:00 PM IST</div>
+                
+                
+
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+                <label for="phone">Phone Number (Optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" />
+
+                <label for="company">Company (Optional)</label>
+                <input type="text" id="company" name="company" placeholder="Your Company" />
+
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Select a subject</option>
+                    <option value="support">Support</option>
+                    <option value="sales">Sales</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="address-box">
+            <h3>Mahatma Gandhi Rd, Bengaluru, Karnataka</h3>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Mahatma+Gandhi+Road+Bengaluru" target="_blank">Get
+                Directions</a>
+            <a href="https://www.google.com/maps/place/Mahatma+Gandhi+Road+Bengaluru" target="_blank">View Larger
+                Map</a>
+        </div>
+    
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.982146627951!2d77.60602107507562!3d12.97518398735859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f2b7b3e3%3A0x7b4e7d4c3e3a1e3e!2sMahatma%20Gandhi%20Road%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1691234567890"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    
+        <div class="support-section">
+            <button>Support</button>
+            <div class="faq">
+                <h2>Frequently Asked Questions</h2>
+                <span>What are your working hours?:</span>
+                <p><strong>A:</strong>Monday to Friday, 9:00 AM to 6:00 PM IST.</p>
+                
+    
+                <p><strong>Q:</strong> How can I contact support?</p>
+                <p><strong>A:</strong> You can email us at support@yourcompany.com or use the contact form above.</p>
+    
+                <p><strong>Q:</strong> Is your office open on weekends?</p>
+                <p><strong>A:</strong> No, we are closed on Saturdays and Sundays.</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

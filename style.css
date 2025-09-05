@@ -1,0 +1,233 @@
+body {
+margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #023602, #013101c8);
+}
+
+ 
+
+header,
+footer {color: white;
+    padding: 0px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+.main-section {
+justify-content: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.get-started {
+    background-color: #165fa9;
+    color: rgb(19, 15, 15);
+}
+
+
+
+.about {
+    color: rgb(25, 14, 14);
+    padding: 12px 24px;
+     border-radius: 8px;
+font-size: 16px;
+ cursor: pointer;
+transition: background-color 0.8s ease;
+}
+
+.fancy-btn:hover {
+    background-color: rgb(99, 162, 203);
+        color:#099ddc;
+}
+/*....footers.....*/ 
+                
+        
+                .container {
+                    max-width: 1200px;
+                    margin: auto;
+                    padding: 40px 20px;
+                }
+        
+                h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                    color: white;
+                    /* Bold yellow */
+                }
+        
+                h2 {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                    color:white;
+                }
+        
+                .contact-info {
+                    margin-bottom: 40px;
+                    line-height: 1.6;
+                }
+        
+                .contact-info span {
+                    display: block;
+                    margin-bottom: 8px;
+                    color: #110c0c;
+                }
+        
+                .newsletter {
+                    margin-bottom: 40px;
+                }
+        
+                .newsletter input[type="email"] {
+                    padding: 10px;
+                    width: 250px;
+                    border: none;
+                    border-radius: 4px;
+                    margin-right: 10px;
+                }
+        
+                .newsletter button {
+                    padding: 10px 15px;
+                    background-color: #165fa9;
+                    border: none;
+                    border-radius: 4px;
+                    color: rgb(14, 12, 12);
+                    cursor: pointer;
+                }
+        
+                .newsletter button:hover {
+                    background-color: #2d8ba8;
+                }
+        
+                .footer-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                    
+                    margin-bottom: 30px;
+                }
+        
+                .footer-links div {
+                    min-width: 150px;
+                }
+        
+                .footer-links {
+                    margin-bottom: 10px;
+                    color: #ff69b4;
+                    /* Hot pink */
+                }
+        
+                .footer-links a {
+                    display: block;
+                    color: #080d0f;
+                    /* Light blue */
+                    text-decoration: none;
+                    margin-bottom: 6px;
+                }
+        
+                .footer-links a:hover {
+                    text-decoration: underline;
+                }
+        
+                .copyright {
+                    text-align: center;
+                    font-size: 0.9rem;
+                    color: #0b0a0a;
+                    margin-top: 20px;
+                }
+/*....Nav list....*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    
+    background-color: rgba(61, 59, 59, 0.2);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+       }
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;}
+
+.nav-right select,
+.nav-right button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;}
+
+.nav-right select {
+    background-color: rgb(202, 37, 37);
+    color: #333;}
+
+.nav-right button {
+    background-color: #ff4081;
+    color: white;
+}
+
+
+.nav-left a,
+.nav-right a {
+    color: whitetext-decoration: none;
+    font-weight: 500;
+}
+
+.nav-right select,
+.nav-right button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-right select {
+    background-color: rgb(25, 56, 214);
+    color: #f6f1f1;
+}
+
+.nav-right button {
+    background-color: #ff4081;
+    color: white;
+}
+
+
+
+
+
+
+/*
+
+        .background: linear-gradient(42deg, #dceff5, #afefe2, #c8e5dc, #b8e5fc, #f0dadb, #f4b0a8, #f3d4ec, #dceff5, #afefe2, #c8e5dc, #b8e5fc, #f0dadb, #f4b0a8, #f3d4ec) 0 0 / 420% 420%;
+
+        */

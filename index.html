@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinxApp</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+    
+        <nav class="navbar1">
+            <h1>𝔽𝕚𝕟𝕩𝕥𝔸𝕡𝕡</h1>
+            <div class="nav-left">
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="app.html">Apps</a>
+                <a href="blog.html">Blog</a>
+                <a href="career.html">Career</a>
+                <a href="consultant.html">Consultant</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-right">
+    
+                <button class="b">Get in Touch</button>
+            </div>
+        </nav>
+    </header>
+
+<!-- Main Content -->  <!-- Carousel -->
+
+<div class="main-content1">
+    <h2>Where Innovation meets Everyday Life</h2>
+    <p>We're Full-service digital agency specializing in branding, web design, development, and digital marketing.
+    </p>
+    <p> Let's build something extraordinary
+        together.</p>
+    </p>
+    <div class="get-btn">
+        <a href="app.html">
+            <button class="get-started">Get Started</button></a>
+
+        <a href="contact.html">
+            <button class="contact">Learn More</button>
+        </a>
+
+    </div>
+    <!-- Carousel -->
+        <div class="carousel1">
+            <div class="carousel1-track">
+                <img src="app image/ap.jpg" alt="slide1">
+                <img src="app image/cop.jpg" alt="slide2">
+                <img src="app image/images.jpg" alt="slide3">
+                <img src="app image/cop.jpg" alt="slide2">
+                <img src="app image/images.jpg" alt="slide3">
+            </div>
+        </div>
+</div>
+<script>
+    const track = document.querySelector('.carousel1-track');
+    const slides = Array.from(track.children);
+    let index = 0;
+
+    function moveCarousel() {
+        index++;
+        if (index >= slides.length) {
+            index = 0;
+        }
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(moveCarousel, 3000); // har 3 second me slide badlega
+</script>
+
+<!-- ABOUT ME------------------>
+
+<section class="hero">
+    <div class="hero-left">
+        <img src="app image/p2.jpeg" alt="Profile">
+        <div class="vertical-text">𝔽𝕚𝕟𝕩𝕥𝔸𝕡𝕡</div>
+
+    </div>
+    <div class="hero-right">
+        <h2>About Me</h2>
+        <p>
+            FinxtApp, Our mission is to simplefy and transform financial management for individuals and
+            businesses over the world We
+            aim to empower shopkeeper,freelances, and small businesses owners by building intuitive digital
+            tools that make expense
+            tracking , invoicin, and reporting easy, fast, and accessible--no matter their level of technical
+            expertise . We
+            innovate not just to keep pace with technology, but to solve real problems that improve daily lives,
+            helping local
+            businesses thrive in a digital-first world.
+        </p>
+        <p>
+            founded in 2021 by a group of engineers passionate about impact-driven innovation, we began as a
+            small startup with a
+            vision to solve real-world problems through technology. Over the years, we’ve grown into a
+            multidisciplinary team,
+            launching products that have helped thousands of users worldwide in their daily lifestyle and make
+            easy also.
+        </p>
+        <button>schedule a call</button>
+    </div>
+</section>
+
+<!-- Latest Work -->
+<div class="work-section">
+    <section class="work">
+        <h1>Explore Our Latest
+            Creative Work</h2>
+            <p>Discover how we've helped businesses transform their digital presence with innovative solutions and
+                cutting-edge technology.
+            </p>
+            <div class="work-gallery" id="carousel">
+                <img src="app image/ap.jpg" alt="slide1">
+                <img src="app image/cop.jpg" alt="slide2">
+                <img src="app image/images.jpg" alt="slide3">
+                <img src="app image/krishi.jpg" alt="slide4">
+                <img src="app image/finapp.jpg" alt="slide5">
+            </div>
+            <span class="view-all">View All</span>
+    </section>
+</div>
+
+<script>
+    const carousel = document.getElementById('carousel');
+    const images = carousel.querySelectorAll('img');
+    let current = 0;
+
+    // List of animations
+    const animations = ["zoom", "tilt", "fade", "lift", "blur"];
+
+    function showImage(idx) {
+        images.forEach((img, i) => {
+            img.className = ""; // reset classes
+            if (i === idx) {
+                img.classList.add("active");
+                // random animation for premium look
+                const effect = animations[Math.floor(Math.random() * animations.length)];
+                img.classList.add(effect);
+            }
+        });
+    }
+
+    function nextImage() {
+        current = (current + 1) % images.length;
+        showImage(current);
+    }
+
+    // Initial
+    showImage(current);
+    setInterval(nextImage, 3000);
+</script>
+<!--------- CORE VALUE------------------------>
+
+<div class="background">
+    <section class="showcase">
+        <h1 class="core">Core Values</h1>
+        <p class="p2">
+            We are driven by a deep sense of purpose and guided by values that keep us grounded and focused. And
+            our
+            team
+            delivers products that make life easy.
+        </p>
+
+        <div class="features">
+            <div>
+                <h1>How to get started</h1>
+                <p>Install the app. Download Finxt India / FinNext India from the Google Play Store or Apple App
+                    Store.</p>
+            </div>
+            <div>
+                <h1>Create your account & complete KYC</h1>
+                <p>Sign up and finish mandatory KYC (PAN, ID, bank details) so you can invest in mutual funds.
+                </p>
+            </div>
+            <div>
+                <h1>Plan your goals</h1>
+                <p>Use Goal-Based Financial Planning to define targets and get an investing path
+                    (SIPs/lump-sum).
+                </p>
+            </div>
+            <div>
+                <h1>Start investing</h1>
+                <p>Pick mutual funds, start a SIP or lump-sum, and track them via systematic reports.</p>
+            </div>
+            <div>
+                <h1>Explore advanced services</h1>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+            <div>
+                <h1>Track & review regularly</h1>
+                <p>Check your portfolio, use calculators and fund-performance screens, and adjust SIPs as
+                    needed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Cards Section ===== -->
+    <div class="cards">
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Stock Trading">
+            <div class="card-content">
+                <h3>Market Access</h3>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Stock Trading">
+            <div class="card-content">
+                <h3>Market Access</h3>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Stock Trading">
+            <div class="card-content">
+                <h3>Market Access</h3>
+                <p>Get equities, commodities, and demat services via Aditya Birla Money franchise.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--------- BUILD SECTINO------------------------>
+<div class="container">
+    <div class="text-content">
+        <h1>Build the Future with Us <br><span class="gradient-text">Innovate, Build, Grow.</span></h1>
+        <p class="p7">
+            We help businesses turn ideas into scalable solutions using modern technology and creativity. i.e.
+            Expensages
+        </p>
+
+        <div class="features7">
+            <div><span>✓</span>Custom Software Development</div>
+            <div><span>✓</span>End-to-End Project Delivery services</div>
+            <div><span>✓</span>AI & Automation Integrations in products</div>
+        </div>
+
+        <div class="button2">
+            <a href="project.html">
+                <button class="start-btn">Start new Project</button></a>
+
+            <a href="work.html">
+                <button class="work-btn">See Our Work here</button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="image-content">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Team at work">
+        <div class="info-box">
+            120+ Projects<br>11+ Years Experience
+        </div>
+    </div>
+</div>
+
+
+<!--------------- OUR APPLICATION----------------->
+
+
+<section class="section-wrapper">
+
+    <!-- Tag Label -->
+    <div class="tag">Our Application</div>
+
+    <!-- Heading -->
+    <h1>
+        Discover Our Award-Winning <span>Mobile Apps</span>
+    </h1>
+
+    <!-- Subtext -->
+    <p class="description">
+        From productivity tools to wellness companions, our apps are designed with user experience at the
+        forefront.
+    </p>
+
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+        <button class="active">All</button>
+        <button>Design</button>
+        <button>Finance</button>
+        <button>Food and Recycling</button>
+        <button>Game</button>
+        <button>Digital Services</button>
+    </div>
+
+    <!-- App Cards -->
+    <div class="app-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="app image/ap.jpg" alt="DesignPro">
+            <div class="card-content">
+                <h3>DesignPro</h3>
+                <p>Professional design tool for mobile and web...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 4.1</span>
+                    <span>1K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="app image/financial support.jpg" alt="Invoice Sage">
+            <div class="card-content">
+                <h3>Invoice Sage</h3>
+                <p>Track invoices and manage your billing easily...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 3.9</span>
+                    <span>2K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="app image/cop.jpg" alt="Spoonshare">
+            <div class="card-content">
+                <h3>Spoonshare</h3>
+                <p>Share unused food with those in need easily...</p>
+                <div class="info">
+                    <span><i class="fa fa-star"></i> 5.0</span>
+                    <span>10K+ Downloads</span>
+                </div>
+                <div class="buttons">
+                    <a href="#"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#"><i class="fab fa-google-play"></i> Play Store</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- team member-->
+<section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Rahul Sharma</h3>
+            <p class="role">Web Developer</p>
+            <p class="about">Expert in front-end and back-end development. Loves coding and coffee.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Priya Verma</h3>
+            <p class="role">UI/UX Designer</p>
+            <p class="about">Passionate about creating user-friendly designs and experiences.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="app image/nishantsir.png" alt="Team Member">
+            <h3>Amit Kumar</h3>
+            <p class="role">Project Manager</p>
+            <p class="about">Skilled in managing projects, leading teams, and delivering results on time.</p>
+        </div>
+
+    </div>
+</section>
+<!-- foooter section-->
+<section class="contact-section4">
+    <div class="contact-left4">
+        <h2>Tell us about your project</h2>
+        <h1>Let's Talk</h1>
+        <p><strong>Head Office</strong></p>
+        <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+        <p><a href="mailto:support@example.com">support@example.com</a></p>
+        <p>+ (406) 555-0120</p>
+    </div>
+    <div class="contact-right4">
+        <h2>Get the latest inspiration & insights</h2>
+        <form class="email-input">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit">&#8594;</button>
+        </form>
+    </div>
+</section>
+
+
+
+<footer>
+    © 2025 Finxtapp. All Rights Reserved.
+</footer>
+
+</body>
+</html>
